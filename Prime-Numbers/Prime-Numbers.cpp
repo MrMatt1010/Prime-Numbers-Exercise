@@ -27,15 +27,16 @@ bool is_prime(int num) {
         std::cout << "Enter the starting Number: ";
         std::cin >> start;
 
-        std::cout << "Enter the ending Number: " << std::endl;
+        std::cout << "Enter the ending Number: ";
         std::cin >> end;
+        std::cout << "\n";
 
         if (start > end) {
-            std::cout << "Starting number should be less than the ending number." << std::endl;
+            std::cout << "Starting number should be less than the ending number." << std::endl << std::endl;
         }
         else {
             std::cout << "Numbers divisible by 7 from(" << start << " to " << end << "): " << std::endl;
-            std::cout << "*****************************" << std::endl << std::endl;
+            std::cout << "*****************************" << std::endl;
             for (int num = start; num <= end; num++) {
                 if (num % 7 == 0) {
                     divisible_by_7.push_back(num);
