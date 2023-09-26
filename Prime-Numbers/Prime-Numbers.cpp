@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 
-
+//Prime number variables and calculations are here
 bool is_prime(int num) {
     if (num <= 1)
         return false;
@@ -22,18 +22,20 @@ bool is_prime(int num) {
         int start, end;
         std::vector<int> divisible_by_7;
         std::vector<int> prime_numbers;
-
+        //This is where the user inputs the required start and end numbers and the code checks to see if the start is lower than the end number
+       //Also the output of the prime numbers, how many there are is done here
         std::cout << "Enter the starting Number: ";
         std::cin >> start;
 
-        std::cout << "Enter the ending Number: ";
+        std::cout << "Enter the ending Number: " << std::endl;
         std::cin >> end;
 
         if (start > end) {
             std::cout << "Starting number should be less than the ending number." << std::endl;
         }
         else {
-            std::cout << "Numbers divisible by 7 in the range(" << start << " to " << end << "): ";
+            std::cout << "Numbers divisible by 7 from(" << start << " to " << end << "): " << std::endl;
+            std::cout << "*****************************" << std::endl << std::endl;
             for (int num = start; num <= end; num++) {
                 if (num % 7 == 0) {
                     divisible_by_7.push_back(num);
@@ -46,16 +48,16 @@ bool is_prime(int num) {
                 }
             }
 
-            std::cout << "Divisible by 7: ";
+            std::cout << "\n\nDivisible by 7: " << std::endl;
             for (int num : prime_numbers) {
                 std::cout << num << " ";
             }
 
-            std::cout << "\nPrime Numbers: ";
+            std::cout << "\n\nPrime Numbers: " << std::endl;
             for (int num : prime_numbers) {
                 std::cout << num << " ";
             }
-            std::cout << "\nTotal prime numbers in the range: " << prime_numbers.size() << std::endl;
+            std::cout << "\n\nTotal prime numbers in the range: " << prime_numbers.size() << std::endl;
         }
 
         return(0);
